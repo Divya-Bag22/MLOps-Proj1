@@ -6,8 +6,8 @@ load_dotenv()
 #For MongoDB connection
 DATABASE_NAME= "Proj1"
 COLLECTION_NAME = "Proj1-Data"
-MONGODB_URL_KEY = os.getenv("MONGODB_URL")
-if MONGODB_URL_KEY is None:
+MONGODB_URL_KEY = "MONGODB_URL_KEY"
+if os.getenv(MONGODB_URL_KEY) is None:
     raise ValueError("MONGODB_URL is not set in environment variables")
 
 PIPELINE_NAME : str = ""
